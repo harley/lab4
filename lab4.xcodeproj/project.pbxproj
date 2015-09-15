@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1845FE2F1BA845D900031FE3 /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1845FE2E1BA845D900031FE3 /* CanvasViewController.swift */; };
 		E2090A2D1BA84215003B4050 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2090A2C1BA84215003B4050 /* AppDelegate.swift */; };
 		E2090A2F1BA84215003B4050 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2090A2E1BA84215003B4050 /* ViewController.swift */; };
 		E2090A321BA84215003B4050 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2090A301BA84215003B4050 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1845FE2E1BA845D900031FE3 /* CanvasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
 		E2090A271BA84215003B4050 /* lab4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lab4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2090A2B1BA84215003B4050 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2090A2C1BA84215003B4050 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				E2090A331BA84215003B4050 /* Images.xcassets */,
 				E2090A351BA84215003B4050 /* LaunchScreen.xib */,
 				E2090A2A1BA84215003B4050 /* Supporting Files */,
+				1845FE2E1BA845D900031FE3 /* CanvasViewController.swift */,
 			);
 			path = lab4;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2090A2F1BA84215003B4050 /* ViewController.swift in Sources */,
+				1845FE2F1BA845D900031FE3 /* CanvasViewController.swift in Sources */,
 				E2090A2D1BA84215003B4050 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +413,7 @@
 				E2090A481BA84215003B4050 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2090A491BA84215003B4050 /* Build configuration list for PBXNativeTarget "lab4Tests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				E2090A4B1BA84215003B4050 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
