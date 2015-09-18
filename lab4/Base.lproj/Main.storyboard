@@ -42,9 +42,13 @@
                                         <rect key="frame" x="128" y="65" width="64" height="64"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happy" id="1AU-T6-uT8">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happy" id="1AU-T6-uT8">
                                         <rect key="frame" x="8" y="65" width="64" height="64"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="VwR-qa-qJg" appends="YES" id="PK3-SZ-Gbw"/>
+                                        </connections>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tongue" id="jX1-Yr-z07">
                                         <rect key="frame" x="248" y="65" width="64" height="64"/>
@@ -69,6 +73,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="happyView" destination="1AU-T6-uT8" id="nJm-oR-ZlO"/>
                         <outlet property="trayView" destination="meQ-v6-y5w" id="4m1-Vn-NuP"/>
                     </connections>
                 </viewController>
@@ -76,6 +81,11 @@
                 <panGestureRecognizer minimumNumberOfTouches="1" id="XHB-4S-sey">
                     <connections>
                         <action selector="onPanGesture:" destination="znu-fs-eER" id="gTL-qs-WYk"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="VwR-qa-qJg">
+                    <connections>
+                        <action selector="onFacePan:" destination="znu-fs-eER" id="LQe-bC-Nee"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>
