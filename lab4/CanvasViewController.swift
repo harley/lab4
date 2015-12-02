@@ -10,7 +10,6 @@ import UIKit
 
 class CanvasViewController: UIViewController {
   
-  
   @IBOutlet weak var trayView: UIView!
   
   var trayOriginalCenter: CGPoint!
@@ -39,10 +38,10 @@ class CanvasViewController: UIViewController {
   
   
   @IBAction func onPanGesture(sender: UIPanGestureRecognizer) {
-    var velocity = sender.velocityInView(view)
-    var state = sender.state
+    let velocity = sender.velocityInView(view)
+    let state = sender.state
     
-    var translation = sender.translationInView(self.view)
+    let translation = sender.translationInView(self.view)
     
     if state == UIGestureRecognizerState.Began {
       trayOriginalCenter = trayView.center
@@ -57,32 +56,22 @@ class CanvasViewController: UIViewController {
         // close the tray
         trayView.center = CGPoint(x: trayOriginalCenter.x, y: downY)
       } else {
-        UIView.animateWithDuration(2, delay: 0, usingSpringWithDamping: 0.1, initialSpringVelocity: 2, options: nil, animations: { () -> Void in
+        UIView.animateWithDuration(2, delay: 0, usingSpringWithDamping: 0.1, initialSpringVelocity: 2, options: [], animations: { () -> Void in
           self.trayView.center = CGPoint(x: self.trayOriginalCenter.x, y: self.upY)
           }, completion: { (bool) -> Void in
             print("animated: \(bool)")
         })
-        // open the tray
-        
-        
       }
-      
-      
     }
   }
   
   
   @IBAction func onFacePan(sender: UIPanGestureRecognizer) {
-    
-    var state = sender.state
-    var translation = sender.translationInView(self.view)
-    
-    var faceView = sender.view as! UIImageView
-    
-    
+    let state = sender.state
+    let translation = sender.translationInView(self.view)
+    let faceView = sender.view as! UIImageView
     
     if state == UIGestureRecognizerState.Began {
-      
       newlyCreatedFace = UIImageView(image: faceView.image)
       newlyCreatedFace.userInteractionEnabled = true
       
@@ -100,11 +89,5 @@ class CanvasViewController: UIViewController {
       newlyCreatedFace.center.x = initialNewFaceCenter.x + translation.x
       newlyCreatedFace.center.y = initialNewFaceCenter.y + translation.y
     }
-    
   }
-  
-  
-  
-  
-  
 }
